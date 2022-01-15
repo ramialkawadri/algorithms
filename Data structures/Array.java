@@ -1,12 +1,12 @@
-public class Array 
+public class Array<E>
 {
-    private int[] values;
+    private Object[] values;
     private int size;
     private int length;
 
     public Array(int size)
     {
-        values = new int[size];
+        values = new Object[size];
         this.size = size;
         length = 0;
     }
@@ -16,10 +16,10 @@ public class Array
         this(0);
     }
 
-    public int get(int i)
+    public E get(int i)
     {
         if (i >= length) throw new IndexOutOfBoundsException();
-        return values[i];
+        return (E) values[i];
     }
 
     public int length()
@@ -27,12 +27,12 @@ public class Array
         return length;
     }
 
-    public void add(int n)
+    public void add(E n)
     {
         if (length >= size)
         {
             size *= 2;
-            int[] temp = new int[size];
+            Object[] temp = new Object[size];
 
             for (int i = 0; i < length; i++)
             {
