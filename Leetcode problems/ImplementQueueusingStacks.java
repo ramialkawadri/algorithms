@@ -1,6 +1,7 @@
 /**
  *https://leetcode.com/submissions/detail/622379237/s://leetcode.com/submissions/detail/622379237/
  */
+
 class MyQueue {
     private Stack<Integer> stack1, stack2;
     
